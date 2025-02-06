@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('fondo.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #5eafff;
+}
+
+input, button {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #090505;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #47b5ff;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #47b5ff;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #00495b;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#resultadoSorteo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #ffffff;
+}

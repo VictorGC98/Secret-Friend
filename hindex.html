@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Amigo Secreto</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Sorteo de Amigo Secreto</h1>
+    <div>
+        <label for="nombreAmigo">Ingresa el nombre de un amigo:</label>
+        <input type="text" id="nombreAmigo">
+        <button onclick="agregarAmigo()">Agregar Amigo</button>
+    </div>
+    <div>
+        <button onclick="realizarSorteo()">Realizar Sorteo</button>
+    </div>
+    <div>
+        <h2>Lista de Amigos</h2>
+        <ul id="listaAmigos"></ul>
+    </div>
+    <div>
+        <h2>Resultado del Sorteo</h2>
+        <p id="resultadoSorteo"></p>
+    </div>
+
+    <script>
+        let amigos = [];
+
+        function agregarAmigo() {
+            const nombreAmigo = document.getElementById('nombreAmigo').value;
+            if (nombreAmigo) {
+                amigos.push(nombreAmigo);
+                document.getElementById('nombreAmigo').value = '';
+                actualizarListaAmigos();
+            } else {
+                alert('Por favor, ingresa un nombre.');
+            }
+        }
+
+        function actualizarListaAmigos() {
+            const listaAmigos = document.getElementById('listaAmigos');
+            listaAmigos.innerHTML = '';
+            amigos.forEach(amigo => {
+                const li = document.createElement('li');
+                li.textContent = amigo;
+                listaAmigos.appendChild(li);
+            });
+        }
+
+        function realizarSorteo() {
+            if (amigos.length === 0) {
+                alert('No hay amigos en la lista.');
+                return;
+            }
+            const amigoElegido = amigos[Math.floor(Math.random() * amigos.length)];
+            mostrarResultado(amigoElegido);
+        }
+
+        function mostrarResultado(amigoSecreto) {
+            const resultadoSorteo = document.getElementById('resultadoSorteo');
+            resultadoSorteo.textContent = `El amigo secreto es: ${amigoSecreto}`;
+        }
+    </script>
+</body>
+</html>
