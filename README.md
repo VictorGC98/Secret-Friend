@@ -18,7 +18,7 @@ Agregar amigos a la lista de participantes.
 1. Clona este repositorio en tu máquina local:
 
 sh
-git clone https://github.com/tu-usuario/sorteo-amigo-secreto.git
+git clone https://github.com/VictorGC98/sorteo-amigo-secreto.git
 
 2. Navega al directorio del proyecto:
 
